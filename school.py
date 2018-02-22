@@ -9,6 +9,6 @@ def print_schedule(n, s):
 
     classes = ""
     for period, cls in enumerate(s):
-        classes += "{}. {}\n".format(period+1, cls)
+        classes += "{}. {}\n".format(period + 1, cls)
 
     return "\n".join([bar, title, bar, classes]) 
