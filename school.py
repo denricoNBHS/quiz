@@ -4,11 +4,11 @@ def print_schedule(n, s):
     s -- the student's schedule, a list of strings.
     """
 
-    header = "Schedule for {}".format(n)
+    title = "Schedule for {}".format(n)
+    bar = '='*len(title)
 
-    print('='*len(header))
-    print(header)
-    print('='*len(header))
-
+    classes = ""
     for period, cls in enumerate(s):
-        print("{}. {}\n".format(period+1, cls))
+        classes += "{}. {}\n".format(period+1, cls)
+
+    return "\n".join([bar, title, bar, classes]) 
